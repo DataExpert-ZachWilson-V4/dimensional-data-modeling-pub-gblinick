@@ -1,12 +1,12 @@
 name: Auto Grading
 
 on:
-  pull_request:
-    branches:
-      - main
-  # pull_request_target:
+  # pull_request:
   #   branches:
   #     - main
+  pull_request_target:
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -63,12 +63,12 @@ jobs:
     if: needs.config.outputs.submission_changes == 'true'
     env:
       SUBMISSION_DIR: 'submission'
-      ASSIGNMENT: 'dimensional-data-modeling' # ${{ needs.config.outputs.assignment }}
-      SECRET_NAME: 'dataexpert/zachwilson/github-autograding-variables'
+      ASSIGNMENT: ${{ needs.config.outputs.assignment }}
       ASSIGNMENT_SCHEMA: ${{ needs.config.outputs.assignment_schema }}
       PR_NUMBER: ${{ github.event.pull_request.number }}
       GITHUB_ORG: ${{ github.event.repository.owner.login }}
       GITHUB_REPO: ${{ github.repository }}
+      SECRET_NAME: ${{ secrets.SECRET_NAME }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:

@@ -30,7 +30,7 @@ Due to our use of GitHub Classroom automation, we cannot accommodate individual 
   3. Click the **"New pull request"** button on the top-right. Now you should be on the [**"Compare changes"**](https://github.com/DataExpert-ZachWilson-V4/dimensional-data-modeling/compare) page
   4. Click where it says **"compare across forks"**
   5. Leave the base repository as is. For the **"head repository"**, select your forked repository and then the name of the branch you want to compare:
-    <img src="compare_changes_screenshot.png" alt="screenshot of compare changes page in GitHub" width="400">
+     - <img src="compare_changes_screenshot.png" alt="screenshot of compare changes page in GitHub" width="600">
   6. Click the **"Create pull request"** button to open the PR
 
 ### Grading

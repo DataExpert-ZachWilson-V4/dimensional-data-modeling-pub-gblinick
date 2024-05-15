@@ -30,7 +30,7 @@ jobs:
           assignment=$(basename "${{ github.event.repository.full_name }}")
           echo "Assignment: $assignment"
           echo "::set-output name=assignment_name::$assignment"
-          schema="$(echo "$(basename "${{ github.repository }}")" | tr '-' '_')_test"
+          schema="$(echo "$(basename "${{ github.repository }}")" | tr '-' '_')_${{github.event.number}}_test"
           echo "Test Schema: $schema"
           echo "::set-output name=schema_name::$schema"
       - name: Get changed files

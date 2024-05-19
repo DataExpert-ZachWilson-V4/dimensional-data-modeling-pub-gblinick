@@ -10,7 +10,7 @@ CREATE TABLE gblinick.actors_history_scd (
 WITH
   (
     FORMAT = 'PARQUET',
-    partitioning = ARRAY['current_year]
+    partitioning = ARRAY['current_year']
   )
 
 

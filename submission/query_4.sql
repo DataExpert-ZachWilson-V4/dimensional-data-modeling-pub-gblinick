@@ -1,5 +1,3 @@
-
--- Actors History SCD Table Batch Backfill Query 
 INSERT INTO
   gblinick.actors_history_scd 
 
@@ -50,9 +48,8 @@ WITH
 
 SELECT
   actor,
-  streak_identifier,
-  is_active,
   quality_class,
+  is_active,
   MIN(current_year) AS start_season,
   MAX(current_year) AS end_season,
   2020 AS current_season
@@ -66,45 +63,3 @@ GROUP BY
 ORDER BY 
 actor,
 streak_identifier
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

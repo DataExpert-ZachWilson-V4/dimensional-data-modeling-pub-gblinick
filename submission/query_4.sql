@@ -1,5 +1,5 @@
 INSERT INTO
-  gblinick.actors_history_scd 
+  actors_history_scd 
 
 WITH
   lagged AS (
@@ -22,7 +22,7 @@ WITH
         ) AS quality_class_last_season,
       current_year
     FROM
-      gblinick.actors
+      actors
     WHERE
       current_year <= 2019
   ),

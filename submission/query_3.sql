@@ -1,5 +1,5 @@
 
-CREATE TABLE gblinick.actors_history_scd (
+CREATE TABLE actors_history_scd (
   actor VARCHAR,
   quality_class VARCHAR, 
   is_active BOOLEAN,

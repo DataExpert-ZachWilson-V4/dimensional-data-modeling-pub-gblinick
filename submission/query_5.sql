@@ -1,10 +1,10 @@
-INSERT INTO gblinick.actors_history_scd
+INSERT INTO actors_history_scd
 WITH
   last_year_scd AS (
     SELECT
       *
     FROM
-      gblinick.actors_history_scd
+      actors_history_scd
     WHERE
       current_year = 2020
   ),
@@ -12,7 +12,7 @@ WITH
     SELECT
       *
     FROM
-      gblinick.actors
+      actors
     WHERE
       current_year = 2021
   ),

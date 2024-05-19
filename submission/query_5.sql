@@ -109,7 +109,7 @@ SELECT
   arr.is_active,
   arr.start_date,
   arr.end_date,
-  current_year */
+  current_year 
 FROM
   changes
   CROSS JOIN UNNEST (change_array) AS arr

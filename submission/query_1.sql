@@ -1,4 +1,4 @@
-CREATE TABLE gblinick.actors (
+CREATE TABLE actors (
   actor VARCHAR,
   actor_id VARCHAR,
 

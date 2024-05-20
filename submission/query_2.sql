@@ -1,8 +1,8 @@
-INSERT INTO gblinick.actors
+INSERT INTO actors
 
 -- get cumulative data from last year
 WITH last_year AS (
-    SELECT * FROM gblinick.actors
+    SELECT * FROM actors
     WHERE current_year = 1914
 ),
 
